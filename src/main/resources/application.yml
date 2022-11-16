@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: rmu-file-manager
+  datasource:
+    password: 3a7ed7b67dc21f4a38c9b2c29f80b44864a27ba2eccc1c6545a534b6c88b22a5
+    url: jdbc:postgresql://ec2-3-219-135-162.compute-1.amazonaws.com:5432/d3hpar0d0e1usg
+
+    username: ivmvsxagmupvvb
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+  servlet:
+    multipart:
+      maxFileSize: 5MB
+      enabled: true
+  http:
+    multipart:
+      enabled: true
+org:
+  apache:
+    tomcat:
+      util:
+        buf:
+          UDecoder:
+            ALLOW_ENCODED_SLASH: true
